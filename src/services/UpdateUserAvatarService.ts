@@ -1,6 +1,7 @@
 import { getRepository } from 'typeorm';
 import path from 'path';
 import uplaoadConfig from '../config/upload';
+import AppError from '../errors/AppError';
 import User from '../models/User';
 import fs from 'fs';
 
@@ -17,7 +18,7 @@ class UpdateUserAvatarService {
 
 
    if(!user){
-     throw new Error('Only authenticated uers can change avatar.')
+     throw new AppError('Only authenticated uers can change avatar.', 401)
    }
 
    if(user.avatar){
