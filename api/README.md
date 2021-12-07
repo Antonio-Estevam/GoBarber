@@ -33,9 +33,19 @@
 
 **Rf**
 
+- O usuário deve poder listar seus agendamentos de um dia específico;
+- O prestador deve receber notificação sempre que huver um novo agendamento;
+- O prestador deve poder visualizar as notificações não lidas;
+
 **RNF**
 
+- Os agendamentos do prestador no dia devem ser armazenados em cache;
+- As notificações do prestador devem ser armazenadas no MongoDB;
+- As notificações do prestador deve ser enviadas em tempo-real utilizando Socket.io;
+
 **RN**
+
+- A notificação deve ter um status de lida ou não-lida para que o prestador possa controlar;
 
 # Agendamento de serviços
 
@@ -56,8 +66,5 @@
 - O usuário não pode agendar um horário já oucupado;
 - O usuário não pode agendar em um horário que já passou;
 - O usuário não pode agendar serviço consigo mesmo;
-
-
-mapeando features 07:16
 
 
