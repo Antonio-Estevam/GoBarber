@@ -3,7 +3,7 @@ import { container } from 'tsyringe';
 import SendForgotPasswordEmailService from '../../../services/SendForgotPasswordEmailService';
 
 export default class ForgotPasswordController {
-  public async creatr(request: Request, response: Response): Promise<Response>{
+  public async create(request: Request, response: Response): Promise<Response>{
     const { email } = request.body;
 
     const sendForgotPasswordEmailService = container.resolve(

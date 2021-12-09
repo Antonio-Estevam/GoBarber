@@ -3,7 +3,7 @@ import { container } from 'tsyringe';
 import ResetPasswordService from '../../../services/ResetPasswordService';
 
 export default class ResetPasswordController {
-  public async creatr(request: Request, response: Response): Promise<Response>{
+  public async create(request: Request, response: Response): Promise<Response>{
     const { password, token } = request.body;
 
     const resetPassword = container.resolve(
@@ -14,7 +14,6 @@ export default class ResetPasswordController {
         token,
         password,
     });
-    //delete user.password;
     return response.status(204).json();
   }
 }

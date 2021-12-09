@@ -63,3 +63,7 @@ describe('AuthenticateUserService', () => {
     expect(response.user).toEqual(user);
  });
 });
+
+
+
+//ver video 07 refatoração de testes
